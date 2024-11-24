@@ -6,6 +6,10 @@
 
 `npx prisma db push`
 
+## Sync prisma db local to live
+
+`npx prisma migrate dev --name init`
+
 ## Prisma studio
 
 `npx prisma studio`
