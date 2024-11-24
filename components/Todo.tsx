@@ -10,7 +10,10 @@ export default function Todo({
   deleteTodo: (id: string) => Promise<void>;
 }) {
   return (
-    <li key={key} className="flex justify-between">
+    <li
+      key={key}
+      className="flex justify-between even:bg-blue-50 p-2 odd:bg-slate-200"
+    >
       {todo?.title}
 
       <span
