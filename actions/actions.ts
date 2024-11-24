@@ -12,3 +12,13 @@ export async function addTodo(formData: FormData) {
 
   revalidatePath("/");
 }
+
+export async function deleteTodo(id: string) {
+  await prisma.task.delete({
+    where: {
+      id
+    }
+  });
+
+  revalidatePath("/");
+}

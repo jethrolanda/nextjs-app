@@ -1,4 +1,5 @@
-import { addTodo } from "@/actions/actions";
+import { addTodo, deleteTodo } from "@/actions/actions";
+import Todo from "@/components/Todo";
 import prisma from "@/lib/db";
 
 export default async function Home() {
@@ -10,7 +11,17 @@ export default async function Home() {
         <h4 className="font-bold">Todo List:</h4>
         <ul>
           {todos.map((todo, key) => (
-            <li key={key}>{todo?.title}</li>
+            <Todo todo={todo} deleteTodo={deleteTodo} />
+            // <li key={key} className="flex justify-between">
+            //   {todo?.title}
+
+            //   <span
+            //     onClick={() => deleteTodo(todo?.id)}
+            //     className="text-sm text-red-700 font-medium cursor-pointer"
+            //   >
+            //     Delete
+            //   </span>
+            // </li>
           ))}
         </ul>
         <form action={addTodo} className="flex flex-col gap-4">
