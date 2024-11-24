@@ -10,8 +10,8 @@ export default async function Home() {
       <div className="shadow-md rounded-md flex flex-col p-10 bg-white gap-4">
         <h4 className="font-bold">Todo List:</h4>
         <ul>
-          {todos.map((todo) => (
-            <Todo todo={todo} deleteTodo={deleteTodo} />
+          {todos.map((todo, key) => (
+            <Todo key={key} todo={todo} deleteTodo={deleteTodo} />
             // <li key={key} className="flex justify-between">
             //   {todo?.title}
 
