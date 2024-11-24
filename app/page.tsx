@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <div className="flex min-h-screen flex-col justify-center items-center bg-slate-200 text-xl">
       <h1 className="text-4xl pb-10 font-extrabold">TODO APP</h1>
-      <div className="shadow-md rounded-md flex flex-col p-10 bg-white gap-4 w-1/2">
+      <div className="shadow-md rounded-md flex flex-col p-10 bg-white gap-4 w-1/3 max-xl:w-2/3 ">
         <h4 className="font-bold">Todo List:</h4>
         <ul>
           {todos.map((todo, key) => (
